@@ -2,7 +2,7 @@
 # ADF4351 Arduino Library & KiCad Hardware Design
 | KiCad Hardware PCB Design | Software Output / RF Spectrum |
 | :---: | :---: |
-| <img width="1578" height="930" alt="Front" src="https://github.com/user-attachments/assets/2eac5e87-a385-4080-a6b1-3c701cb6a450" />| https://github.com/user-attachments/assets/c4023a58-856d-49a5-9c1d-42e39ec6bdd4 |
+| <img width="1578" height="930" alt="Front" src="https://github.com/user-attachments/assets/2eac5e87-a385-4080-a6b1-3c701cb6a450" />|  https://github.com/user-attachments/assets/c4023a58-856d-49a5-9c1d-42e39ec6bdd4 |
 
 A complete open-source RF signal generation suite featuring a **lightweight C++ driver** and a **custom open-hardware PCB design in KiCad** for the Analog Devices ADF4351 wideband frequency synthesizer (35 MHz – 4.4 GHz).
 
@@ -119,8 +119,8 @@ myConfig.outputPower = 2;      // Set power to +2 dBm
 
 Computes the 6 required 32-bit register values for a given frequency in Hertz.
 - Parameters:
-  - _freqHz (uint64_t)_: Target output frequency in Hz (35,000,000 to 4,400,000,000 Hz).
-  - _outRegisters (uint32_t[6])_: Array to hold the resulting register words R0 through R5.
+  - `freqHz (uint64_t)`: Target output frequency in Hz (35,000,000 to 4,400,000,000 Hz).
+  - `outRegisters (uint32_t[6])`: Array to hold the resulting register words R0 through R5.
 - Returns: bool – true if calculation succeeded; false if frequency is out of range or invalid.
 ~~~
 uint32_t registers[6];
