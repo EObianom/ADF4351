@@ -1,4 +1,6 @@
-# For PCBs designed using KiCad: https://www.kicad.org/
+# ==========================================
+# KiCad Git Ignore Patterns
+# ==========================================
 # Format documentation: https://kicad.org/help/file-formats/
 
 # Temporary files
@@ -41,3 +43,12 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+# ==========================================
+# Arduino / IDE Ignore Patterns
+# ==========================================
+.vscode/
+.idea/
+*.elf
+*.hex
+*.bin

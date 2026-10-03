@@ -1,0 +1,52 @@
+#######################################
+# Syntax Highlighting For ADF4351
+#######################################
+
+# Datatypes and Classes (KEYWORD1)
+ADF4351	KEYWORD1
+Config	KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+calculateRegisters	KEYWORD2
+setConfig	KEYWORD2
+getConfig	KEYWORD2
+
+# Individual Setters (KEYWORD2)
+# Arranged according to relevance to registers from 5 to 0
+setRefFreqHz	KEYWORD2
+setLdPinMode	KEYWORD2
+
+setFeedbackSelect	KEYWORD2
+setVcoPowerdown	KEYWORD2
+setMtld	KEYWORD2
+setAuxOutputSelect	KEYWORD2
+setAuxOutputEnable	KEYWORD2
+setAuxOutputPower	KEYWORD2
+setRfOutputEnable	KEYWORD2
+setOutputPower	KEYWORD2
+
+setBandSelectMode	KEYWORD2
+setAbp	KEYWORD2
+setChargeCancel	KEYWORD2
+setCsr	KEYWORD2
+setClkDivMode	KEYWORD2
+setClkDivValue	KEYWORD2
+
+setNoiseMode	KEYWORD2
+setMuxout	KEYWORD2
+setReferenceDoubler	KEYWORD2
+setRdiv2	KEYWORD2
+setRDivider	KEYWORD2
+setDoubleBuff	KEYWORD2
+setChargePumpCurr	KEYWORD2
+setLdf	KEYWORD2
+setLdp	KEYWORD2
+setPdPolarity	KEYWORD2
+setPowerDown	KEYWORD2
+setCpThreeState	KEYWORD2
+setCounterReset	KEYWORD2
+
+setAutoPrescaler	KEYWORD2
+setPrescaler	KEYWORD2
+setPhaseAdjust	KEYWORD2
+setPhaseValue	KEYWORD2
