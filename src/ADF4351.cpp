@@ -2,6 +2,9 @@
 ADF4351::ADF4351() : m_config() {}
 ADF4351::ADF4351(Config config) : m_config(config) {}
 
+/**
+ * @brief Helper function: Computes Greatest Common Divisor (GCD) via Euclidean algorithm.
+ */
 uint32_t ADF4351::gcd(uint32_t a, uint32_t b) {
     while (b != 0) {
         uint32_t temp = b;
@@ -11,6 +14,13 @@ uint32_t ADF4351::gcd(uint32_t a, uint32_t b) {
     return a;
 }
 
+/**
+ * @brief Computes register settings (R0-R5) for a requested RF frequency.
+ * 
+ * Step 1: Determines the RF divider ratio to bring VCO into range (2.2–4.4 GHz).
+ * Step 2: Calculates INT, FRAC, and MOD parameters using Euclidean GCD scaling.
+ * Step 3: Packs configuration parameters into the 6 32-bit ADF4351 register words.
+ */
 bool ADF4351::calculateRegisters(uint64_t freqHz, uint32_t outRegisters[6]) {
     if (freqHz < 35000000ULL || freqHz > 4400000000ULL) return false;
 

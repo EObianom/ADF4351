@@ -1,17 +1,33 @@
+/**
+ * @file ReadWriteConfiguration.ino
+ * @brief Configuration bundle example for the ADF4351 RF Synthesizer.
+ * 
+ * @author Dr. Ekenedirichukwu Obianom
+ * @date October 2026
+ * 
+ * Demonstrates how to read default chip configuration parameters, build a custom
+ * ADF4351::Config struct bundle, apply it using setConfig(), and verify the
+ * updated settings.
+ * 
+ * @target Adafruit Metro ESP32-S3 / General Arduino Framework
+ * @hardware ADF4351 Wideband Synthesizer Board
+ */
+ 
 #include <Arduino.h>
 #include "ADF4351.h"
 
-// Instantiate the driver
-ADF4351 synth;
+// Instantiate the class
+ADF4351 adf;
 
 void setup() {
+    // Initialize Serial
     Serial.begin(115200);
-    while (!Serial); // Wait for Serial monitor to connect
+    while (!Serial) { ; }   // Wait for Serial monitor to connect
 
     Serial.println(F("=== 1. Reading Default Configuration ==="));
     
     // Read the current configuration from the driver
-    ADF4351::Config currentConfig = synth.getConfig();
+    ADF4351::Config currentConfig = adf.getConfig();
     
     // Print out a few default values
     Serial.print(F("Default Ref Freq: "));
@@ -34,13 +50,12 @@ void setup() {
     customSettings.rDivider    = 2;        // Change reference divider to 2
 
     // Apply the entire bundle to the driver using setConfig
-    synth.setConfig(customSettings);
-
+    adf.setConfig(customSettings);
 
     Serial.println(F("=== 3. Verifying Updated Configuration ==="));
 
     // Read the updated configuration back from the driver
-    ADF4351::Config updatedConfig = synth.getConfig();
+    ADF4351::Config updatedConfig = adf.getConfig();
 
     Serial.print(F("Updated Ref Freq: "));
     Serial.print(updatedConfig.refFreqHz);
@@ -52,14 +67,17 @@ void setup() {
     Serial.print(F("Updated R Divider: "));
     Serial.println(updatedConfig.rDivider);
 
-    // // You can pass a const / temporary struct directly into setConfig:
-    // synth.setConfig(ADF4351::Config{
-    //     .refFreqHz = 10000000,
-    //     .outputPower = 1,
-    //     .rDivider = 2
-    // });
+ /*
+     * Alternative inline struct initialization option:
+     *
+     * adf.setConfig(ADF4351::Config{
+     *     .refFreqHz = 10000000,
+     *     .outputPower = 1,
+     *     .rDivider = 2
+     * });
+     */
 }
 
 void loop() {
-    // Nothing here for this demonstration
+    // Idle - setup runs configuration demonstration once
 }
