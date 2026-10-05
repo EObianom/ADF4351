@@ -7,7 +7,7 @@
 	(title_block
 		(title "ADF4351 Trial Board")
 		(date "2026-09-28")
-		(rev "v2.0")
+		(rev "v1.0")
 		(comment 1 "by Dr Ekenedirichukwu Obianom")
 	)
 	(lib_symbols
