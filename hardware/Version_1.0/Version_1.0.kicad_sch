@@ -9,6 +9,7 @@
 		(date "2026-07-21")
 		(rev "v1.0")
 		(comment 1 "by Dr Ekenedirichukwu Obianom")
+		(comment 3 "This version makes use of outputs A+, A-, B+, and B-.")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x06_Pin"
