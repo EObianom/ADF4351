@@ -1,7 +1,7 @@
 # ADF4351 Arduino Library & KiCad Hardware Design
 | KiCad Hardware PCB Design | Software Output / RF Spectrum |
 | :---: | :---: |
-| <img width="1578" height="930" alt="Front" src="https://github.com/user-attachments/assets/2eac5e87-a385-4080-a6b1-3c701cb6a450" />| https://github.com/user-attachments/assets/7dd1f7be-7177-40c9-8f7e-6cccfdf0b84d |
+| <img width="1600" height="1600" alt="v3 hardware" src="https://github.com/user-attachments/assets/c8d07764-4e14-41b2-8c70-457ea875daf6" /> | https://github.com/user-attachments/assets/13627ffa-e069-458c-9974-3c6d26c1047d |
 
 A complete open-source RF signal generation suite featuring a **lightweight C++ driver** and a **custom open-hardware PCB design in KiCad** for the Analog Devices ADF4351 wideband frequency synthesizer (35 MHz – 4.4 GHz).
 
