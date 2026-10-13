@@ -27,8 +27,8 @@ A complete open-source RF signal generation suite featuring a **lightweight C++ 
   - Register 3 Setters (Clock Dividers & Modes)
   - Register 2 Setters (PLL & Charge Pump Controls)
   - Register 1 & 0 Setters (Prescaler & Phase Settings)
-- Hardware Overview
-- Hardware Files
+- Hardware Design & Variants
+- Hardware Files & Production Assets
 - License
 
 ## Features
@@ -459,16 +459,26 @@ ___
 adf.setPhaseValue(1);
 ~~~
 
-## Hardware Overview
-The ADF4351 features an integrated Voltage Controlled Oscillator (VCO) operating natively between 2200 MHz and 4400 MHz. Lower output frequencies (35 MHz to 2200 MHz) are generated using internal divide-by-1, 2, 4, 8, 16, 32, or 64 output dividers.
 
+## Hardware Design & Variants
+The open-source hardware files located in the [`hardware/`](./hardware) directory provide a complete, 4-layer PCB design built in **KiCad**. Depending on your RF output and clock reference requirements, the hardware architecture accommodates three tailored board configurations:
 
-                                      
-## Hardware Files
-Complete open-source hardware design files created in KiCad are available in the hardware/ directory:
-- ADF4351.kicad_sch: Complete schematic diagram with power filtering and RF matching networks.
-- ADF4351.kicad_pcb: 2-layer controlled impedance PCB layout.
-- ADF4351.kicad_pro: KiCad project workspace file.
+* **Version 1 (Full Feature Output):** Breaks out all available differential RF output pairs (RFoutA+/A- and RFoutB+/B-) alongside an external SMA connector for a high-precision input reference clock.
+* **Version 2 (Primary Differential):** Features the primary differential output pair (RFoutA+ and RFoutA-) with an external SMA input reference clock option.
+* **Version 3 (Single-Ended & On-Board TCXO — Default):** Optimized for compact standalone operation with a single-ended RF output (RFoutA+) and an integrated 25MHz reference oscillator. *(Featured in the header image).*
+
+---
+
+## Hardware Files & Production Assets
+All KiCad design, manufacturing, and documentation assets are structured in the [`hardware/`](./hardware) directory:
+
+| Asset / File Name | Description |
+| :--- | :--- |
+| **`ADF4351.kicad_pro`** | Master KiCad project workspace file. |
+| **`ADF4351.kicad_sch`** | Schematic diagram featuring low-noise LDO regulation, loop filter topology, and 50 Ω matching networks. |
+| **`ADF4351.kicad_pcb`** | 4-layer controlled-impedance PCB layout. |
+| **`Production/`** | Contains complete fabrication-ready **Gerbers**, Bill of Materials (**BOM**), and Component Placement List (**CPL**) for automated SMT assembly. |
+| **`Figures/`** | High-resolution 3D renders of the assembled boards. |
 
 ## License
 This library is released under the MIT License. Free to use, modify, and distribute in both open-source and commercial applications.
