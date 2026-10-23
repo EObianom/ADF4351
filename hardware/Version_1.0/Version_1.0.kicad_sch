@@ -5,7 +5,7 @@
 	(uuid "fdfa6579-0f25-4cb3-93b7-070a4f14fd05")
 	(paper "A4")
 	(title_block
-		(title "ADF4351 Trial Board")
+		(title "ADF4351")
 		(date "2026-07-21")
 		(rev "v1.0")
 		(comment 1 "by Dr Ekenedirichukwu Obianom")

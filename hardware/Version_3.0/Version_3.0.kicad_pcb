@@ -8,8 +8,9 @@
 	)
 	(paper "A5")
 	(title_block
-		(title "ADF4351 Board")
+		(title "ADF4351")
 		(date "2026-10-13")
+		(rev "v3.0")
 		(comment 1 "by Dr Ekenedirichukwu Obianom")
 	)
 	(layers
@@ -107,7 +108,6 @@
 		)
 		(capping no)
 		(filling no)
-		(zone_defaults)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)

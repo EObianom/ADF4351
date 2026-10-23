@@ -5,9 +5,9 @@
 	(uuid "fdfa6579-0f25-4cb3-93b7-070a4f14fd05")
 	(paper "A4")
 	(title_block
-		(title "ADF4351 Board")
+		(title "ADF4351")
 		(date "2026-09-28")
-		(rev "v1.0")
+		(rev "v3.0")
 		(comment 1 "by Dr Ekenedirichukwu Obianom")
 		(comment 3 "A fixed oscillator now sits there.")
 		(comment 4 "The reference voltage generator input has also been terminated. ")
