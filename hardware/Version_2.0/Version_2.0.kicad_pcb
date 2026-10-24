@@ -9831,6 +9831,45 @@
 		(layer "Edge.Cuts")
 		(uuid "9e9f69c6-39a6-4bc3-9f46-2545bb463484")
 	)
+	(gr_text "OUTA-"
+		(at 86.07 69.73 0)
+		(layer "F.SilkS")
+		(uuid "6228281b-bd07-4dbd-bc3a-217c09ef65f9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "OUTA+"
+		(at 86.1 53.07 0)
+		(layer "F.SilkS")
+		(uuid "9afa1337-fb5f-41dd-832a-9a95e043f300")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "REFIN"
+		(at 109.9 58.47 0)
+		(layer "F.SilkS")
+		(uuid "70f7b199-5b41-4896-ad64-0fa6099b92cf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
 	(gr_text "3v3"
 		(at 93.7625 42.65 90)
 		(layer "F.SilkS")
